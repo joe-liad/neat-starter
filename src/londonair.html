@@ -1,0 +1,55 @@
+---
+layout: default
+title: Londonair dashboard
+path: home
+---
+
+<div
+  class="container mx-auto lg:h-screen flex flex-col justify-center items-center"
+>
+  <h1>
+    <strong
+      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
+    >
+      {{title}}
+    </strong>
+  </h1>
+
+  <div class="h-4/6 overflow-auto">
+    <div id="observablehq-viewof-compareSites-2109fb69"></div>
+    <div id="observablehq-viewof-catford-2109fb69"></div>
+    <div id="observablehq-viewof-deptford-2109fb69"></div>
+    <div id="observablehq-viewof-honorOakPark-2109fb69"></div>
+    <div id="observablehq-viewof-loampitVale-2109fb69"></div>
+  </div>
+
+  <script type="module">
+    import {
+      Runtime,
+      Inspector,
+    } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@joe-liad/air-sensors-in-lewisham.js?v=3";
+    new Runtime().module(define, (name) => {
+      if (name === "viewof compareSites")
+        return new Inspector(
+          document.querySelector("#observablehq-viewof-compareSites-2109fb69")
+        );
+      if (name === "viewof catford")
+        return new Inspector(
+          document.querySelector("#observablehq-viewof-catford-2109fb69")
+        );
+      if (name === "viewof deptford")
+        return new Inspector(
+          document.querySelector("#observablehq-viewof-deptford-2109fb69")
+        );
+      if (name === "viewof honorOakPark")
+        return new Inspector(
+          document.querySelector("#observablehq-viewof-honorOakPark-2109fb69")
+        );
+      if (name === "viewof loampitVale")
+        return new Inspector(
+          document.querySelector("#observablehq-viewof-loampitVale-2109fb69")
+        );
+    });
+  </script>
+</div>
