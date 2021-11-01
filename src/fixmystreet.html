@@ -26,49 +26,4 @@ path: home
     if (name === "viewof last25hoursTick") return new Inspector(document.querySelector("#observablehq-viewof-last25hoursTick-273d3ef4"));
   });
   </script>
-    <!-- <div class="h-4/6 overflow-auto w-screen">
-    <div id="observablehq-mapContainer-f84835f2"></div>
-    <div class="inline-flex">
-      <div id="observablehq-viewof-start-f84835f2"></div>
-      <div id="observablehq-viewof-end-f84835f2"></div>
-      <div id="observablehq-viewof-radiusPixels-f84835f2"></div>
-      <div id="observablehq-viewof-intensity-f84835f2"></div>
-      <div id="observablehq-viewof-serviceFilter-f84835f2"></div>
-    </div>
-  </div>
-
-  <script type="module">
-    import {
-      Runtime,
-      Inspector,
-    } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import define from "https://api.observablehq.com/@joe-liad/exploring-fixmystreet-data.js?v=3";
-    new Runtime().module(define, (name) => {
-      if (name === "mapContainer")
-        return new Inspector(
-          document.querySelector("#observablehq-mapContainer-f84835f2")
-        );
-      if (name === "viewof start")
-        return new Inspector(
-          document.querySelector("#observablehq-viewof-start-f84835f2")
-        );
-      if (name === "viewof end")
-        return new Inspector(
-          document.querySelector("#observablehq-viewof-end-f84835f2")
-        );
-      if (name === "viewof radiusPixels")
-        return new Inspector(
-          document.querySelector("#observablehq-viewof-radiusPixels-f84835f2")
-        );
-      if (name === "viewof intensity")
-        return new Inspector(
-          document.querySelector("#observablehq-viewof-intensity-f84835f2")
-        );
-      if (name === "viewof serviceFilter")
-        return new Inspector(
-          document.querySelector("#observablehq-viewof-serviceFilter-f84835f2")
-        );
-      return ["deckgl", "layer"].includes(name);
-    });
-  </script> -->
 </div>
